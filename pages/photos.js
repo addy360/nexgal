@@ -1,11 +1,11 @@
 import React from 'react'
 
-function index() {
+function Photos() {
   return (
     <div>
-      <h4>Home</h4>
+      <h4>Photos</h4>
     </div>
   )
 }
 
-export default index
+export default Photos

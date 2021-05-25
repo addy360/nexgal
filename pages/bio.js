@@ -1,11 +1,11 @@
 import React from 'react'
 
-function index() {
+function Bio() {
   return (
     <div>
-      <h4>Home</h4>
+      <h4>Bio</h4>
     </div>
   )
 }
 
-export default index
+export default Bio
