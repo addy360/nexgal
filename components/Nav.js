@@ -19,7 +19,7 @@ function Nav() {
             <a
             
             className="site-menu-toggle js-menu-toggle text-white"
-            ><span className="icon-menu h3"></span></a>
+            ><span className="icon-menu h3"></span>Menu</a>
             </Link>
          
         </div>
