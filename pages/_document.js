@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Main, NextScript, Html } from 'next/document'
 import Nav from '../components/Nav'
 export default class CustomDocument extends Document {
   static async getInitialProps (ctx) {
@@ -7,15 +7,14 @@ export default class CustomDocument extends Document {
 
   render () {
     return (
-      <html >
+      <Html >
         <Head>
-          <title>Site Title</title>
           
         </Head>
 
         <body>
 
-            <div className="site-wrap">
+          <div className="site-wrap">
             <div className="site-mobile-menu">
                 <div className="site-mobile-menu-header">
                 <div className="site-mobile-menu-close mt-3">
@@ -26,9 +25,21 @@ export default class CustomDocument extends Document {
             </div>
             <Nav/>
             <main className="main-content">
+            <div className="container-fluid photos">
             <Main />
-            </main>
+            <div className="row justify-content-center">
+              <div className="col-md-12 text-center py-5">
+                <p>
+                  Copyright &copy;
+                  
+                  All rights reserved
+                </p>
+              </div>
             </div>
+            </div>
+            </main>
+           
+          </div>
           
           <NextScript />
           
@@ -46,7 +57,7 @@ export default class CustomDocument extends Document {
         <script src="/static/jquery.fancybox.min.js"></script>
         <script src="/static/main.js"></script>
         </body>
-      </html>
+      </Html>
     )
   }
 }
