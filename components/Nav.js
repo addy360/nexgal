@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 function Nav() {
+
     return (
         <header
         className="header-bar d-flex d-lg-block align-items-center"
@@ -33,7 +34,7 @@ function Nav() {
                 
                 </li>
             <li> <Link  href="/photos" >
-                <a>Photos</a>
+                Photos
                 </Link></li>
             <li> <Link  href="/bio" >
                 <a>Bio</a>
@@ -60,5 +61,6 @@ function Nav() {
       </header>
     )
 }
+
 
 export default Nav
