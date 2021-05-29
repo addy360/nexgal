@@ -38,3 +38,10 @@
   font-size: 0.8rem !important;
   font-style: italic !important;
 }
+
+@media screen and (max-width: 979px) {
+  .blog__item {
+    flex-direction: column;
+    padding: 2rem;
+  }
+}
