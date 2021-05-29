@@ -1,17 +1,23 @@
 import React from 'react'
+import Link from "next/link";
 
-function Category() {
+function Category({img}) {
+    let heading = img.split('.')
+    heading.pop()
+    heading = heading.join(" ")
     return (
-      <div className="col-6 col-md-6 col-lg-8" data-aos="fade-up">
-        <a href="single.html" className="d-block photo-item">
-          <img src="/uploads/img_2.jpg" alt="Image" className="img-fluid" />
-          <div className="photo-text-more">
+      <div className="col-6 col-md-6 col-lg-4"  data-aos="fade-up">
+        <Link href="/photos/single">
+          <a  className="d-block photo-item">
+            <img src={`/uploads/${img}`} alt="Image" className="img-fluid" />
             <div className="photo-text-more">
-              <h3 className="heading">Photos Title Here</h3>
-              <span className="meta">42 Photos</span>
+              <div className="photo-text-more">
+                <h3 className="heading">{`${heading}`}</h3>
+                <span className="meta">42 Photos</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        </Link>
       </div>
     )
 }
