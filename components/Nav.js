@@ -9,7 +9,9 @@ function Nav() {
         data-aos="fade-left"
       >
         <div className="site-logo">
-          <a href="index.html">Nexgal</a>
+        <Link href="/" >
+          <a >Nexgal</a>
+          </Link>
         </div>
         <div
           className="d-inline-block d-xl-none ml-md-0 ml-auto py-3"
