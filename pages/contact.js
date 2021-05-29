@@ -7,7 +7,7 @@ function Contact() {
               <h2 className="text-white mb-4">Contact Me</h2>
               <div className="row">
                 <div className="col-md-12">
-                 <p classNameName="mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum vero libero totam neque voluptatem eum provident autem ea distinctio. Incidunt.</p>
+                 <p className="mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum vero libero totam neque voluptatem eum provident autem ea distinctio. Incidunt.</p>
                   <div className="row">
                     <div className="col-md-12">
                       <form action="contact.html#">
@@ -89,4 +89,9 @@ function Contact() {
   )
 }
 
+export const getServerSideProps = (ctx) => {
+  return {
+    props : {}
+  }
+}
 export default Contact
