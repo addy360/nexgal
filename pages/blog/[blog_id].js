@@ -1,11 +1,11 @@
 import React from 'react'
 
-function SingleBlog() {
+function SingleBlog({img}) {
     return (
              <div className="row justify-content-center">
                 <div className="col-md-6 pt-4">
                 <figure className="mb-5" data-aos="fade-up">
-                    <img src="/uploads/img_1.jpg" alt="Image" className="img-fluid" />
+                    <img src={`/uploads/${img}`} alt="Image" className="img-fluid" />
                     <i>Jane Doe</i>
                 </figure>
                 <h2 className="text-white mb-4" data-aos="fade-up">
@@ -28,9 +28,16 @@ function SingleBlog() {
 
 
 export const getServerSideProps = (ctx) => {
-    
+    const  {blog_id}  = ctx.params
+    if (!blog_id) {
+        return {
+            props : {}
+        }
+    }
     return {
-      props : {}
+      props : {
+          img: blog_id
+      }
     }
   }
 

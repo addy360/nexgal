@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from "next/link";
+import { getImages } from '../../utils';
 
 function Blog({blogs}) {
   return (
@@ -16,10 +17,10 @@ function Blog({blogs}) {
           <div className="col-md-12 " key={blog} data-aos="fade-up">
           <div className="d-flex blog-entry blog__item  align-items-start">
             <div className="mr-5 img-wrap">
-              <Link href="/blog/single" >
+              <Link href={`/blog/${blog}`} >
               <a 
                 ><img
-                  src="/uploads/blog_1.jpg"
+                  src={`/uploads/${blog}`}
                   alt="Image"
                   className="img-fluid blog__item--img"
               /></a>
@@ -28,7 +29,7 @@ function Blog({blogs}) {
             </div>
             <div>
               <h2 className="mt-0 mb-2 blog__item--title ">
-              <Link href="/blog/single" >
+              <Link  href={`/blog/${blog}`} >
                 <a 
                   >An amazing gallery, Feel free to post your memorable pictures for world to see</a
                 >
@@ -36,7 +37,7 @@ function Blog({blogs}) {
               </h2>
               <div className="meta blog__item--meta mb-3">
                 Posted by John on
-                <Link href="/blog/single" >
+                <Link  href={`/blog/${blog}`} >
                 <a>Feb. 24, 2020</a>
                 </Link>
               </div>
@@ -67,7 +68,7 @@ function Blog({blogs}) {
 }
 
 export const getServerSideProps = (ctx) => {
-    const blogs  = [1,2,3,4,5,6]
+    const blogs  = getImages()
     return {
       props : {blogs}
     }
