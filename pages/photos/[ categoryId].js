@@ -1,282 +1,43 @@
 import React from 'react'
+import { getImages } from '../../utils'
 
-function Single() {
+function Single({images}) {
+  console.log(`images`, images)
     return (
-        <div class="row align-items-stretch">
-        <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up">
-          <a
-            href="/uploads/img_1.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_1.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-6 col-md-6 col-lg-6"
+        <div className="row align-items-stretch">
+      
+      {images.map(function (img) {
+        return (
+          <div
+          className="col-6 col-md-6 "
+          key={img}
           data-aos="fade-up"
           data-aos-delay="100"
         >
           <a
-            href="/uploads/img_2.jpg"
-            class="d-block photo-item"
+            href={`/uploads/${img}`}
+            className="d-block photo-item"
             data-fancybox="gallery"
           >
-            <img src="/uploads/img_2.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
+            <img src={`/uploads/${img}`} alt="Image" className="img-fluid" />
+            <div className="photo-text-more">
+              <span className="icon icon-search"></span>
             </div>
           </a>
         </div>
-        <div
-          class="col-6 col-md-6 col-lg-3"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <a
-            href="/uploads/img_3.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_3.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-8" data-aos="fade-up">
-          <a
-            href="/uploads/img_4.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_4.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-6 col-md-6 col-lg-4"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <a
-            href="/uploads/img_5.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_5.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up">
-          <a
-            href="/uploads/img_6.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_6.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-6 col-md-6 col-lg-6"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <a
-            href="/uploads/img_7.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_7.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a
-            href="/uploads/img_8.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_8.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-6 col-md-6 col-lg-4"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <a
-            href="/uploads/img_9.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_9.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-6 col-md-6 col-lg-4"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <a
-            href="/uploads/img_10.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_10.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-3" data-aos="fade-up">
-          <a
-            href="/uploads/img_1.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_1.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-6 col-md-6 col-lg-6"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <a
-            href="/uploads/img_2.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_2.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-6 col-md-6 col-lg-3"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <a
-            href="/uploads/img_3.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_3.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-8" data-aos="fade-up">
-          <a
-            href="/uploads/img_4.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_4.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-6 col-md-6 col-lg-4"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <a
-            href="/uploads/img_5.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_5.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-6" data-aos="fade-up">
-          <a
-            href="/uploads/img_6.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_6.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-6 col-md-6 col-lg-6"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <a
-            href="/uploads/img_7.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_7.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div class="col-6 col-md-6 col-lg-4" data-aos="fade-up">
-          <a
-            href="/uploads/img_8.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_8.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
-        <div
-          class="col-6 col-md-6 col-lg-8"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <a
-            href="/uploads/img_9.jpg"
-            class="d-block photo-item"
-            data-fancybox="gallery"
-          >
-            <img src="/uploads/img_9.jpg" alt="Image" class="img-fluid" />
-            <div class="photo-text-more">
-              <span class="icon icon-search"></span>
-            </div>
-          </a>
-        </div>
+        )
+      })  }
+        
       </div>
     )
 }
+
+export const getServerSideProps = (ctx) => {
+  const images = getImages()
+  return {
+    props : {images}
+  }
+}
+
 
 export default Single

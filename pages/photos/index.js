@@ -1,10 +1,9 @@
 import React from 'react'
 import Link from "next/link";
-import { readdirSync } from "fs";
-import { join } from "path";
+import { getImages } from '../../utils';
+
 
 function Photos({images}) {
-  console.log(`images`, images)
   return (
     <div className="row align-items-stretch">
       {images.map(function(img) {
@@ -31,7 +30,7 @@ function Photos({images}) {
 }
 
 export const getServerSideProps = (ctx) => {
-  const images = readdirSync( join( process.cwd(), 'public', 'uploads' ) )
+  const images = getImages()
   return {
     props : {images}
   }
