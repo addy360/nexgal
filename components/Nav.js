@@ -1,8 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from "next/router";
 
 function Nav() {
-
+    const [routePath, setRoutePath] = React.useState('')
+    const router = useRouter()
+    React.useEffect(function() {
+      setRoutePath(router.pathname)
+    })
     return (
         <header
         className="header-bar d-flex d-lg-block align-items-center"
@@ -28,23 +33,23 @@ function Nav() {
         <div className="main-menu">
           <ul className="js-clone-nav">
               {/* active */}
-            <li className="active">
+            <li className={ routePath == '/' ? 'active': '' }>
                 <Link  href="/" >
                 <a>Home</a>
                 </Link>
                 
                 
                 </li>
-            <li> <Link  href="/photos" >
+            <li className={ routePath == '/photos' ? 'active': '' }> <Link  href="/photos" >
                 Photos
                 </Link></li>
-            <li> <Link  href="/bio" >
+            <li className={ routePath == '/bio' ? 'active': '' }> <Link  href="/bio" >
                 <a>Bio</a>
                 </Link></li>
-            <li> <Link  href="/blog" >
+            <li className={ routePath == '/blog' ? 'active': '' }> <Link  href="/blog" >
                 <a>blog</a>
                 </Link></li>
-            <li> <Link  href="/contact" >
+            <li className={ routePath == '/contact' ? 'active': '' }> <Link  href="/contact" >
                 <a>Contact</a>
                 </Link></li>
           </ul>
