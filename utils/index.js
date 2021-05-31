@@ -1,6 +1,7 @@
 import { readdirSync } from "fs";
-import { join } from "path";
+import {  join } from "path";
 
 export const getImages = () => {
-    return readdirSync( join( process.cwd(), 'public', 'uploads' ) )
+    const photoDir = join( process.cwd(), 'public', 'uploads' )
+    return readdirSync( photoDir )
 }
